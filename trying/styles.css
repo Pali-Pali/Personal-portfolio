@@ -39,7 +39,7 @@ header {
     background:transparent;
     color: #f7f2f2;
     padding: 10px 0;
-    text-align: right;
+    text-align: center;
     font-size: large;
 }
 
@@ -58,6 +58,7 @@ header {
 .text {
     flex: 1; /* Take remaining space */
     margin-right: 20px; /* Space between text and image */
+    
 }
 
 .image img {
@@ -90,6 +91,7 @@ nav ul li a {
 
 main {
     padding: 20px;
+    border-radius: 30px;
 }
 
 section {
@@ -289,16 +291,20 @@ body {
     background-color: transparent;
     padding: 20px;
     border-radius: 5px;
-    
+
     max-width: 600px;
     margin: auto;
+}
+.send{
+    background-color: #005d88;
+    font-size: large;
 }
 
 h2 {
     text-align: left;
 }
 h2 .about{
-    text-align: left;
+        text-align: left;
     
 }
 .About-Me{
@@ -343,7 +349,9 @@ button {
 #education{
 background-color:transparent;
 margin-bottom: 120px;
-
+}
+.education-header{
+    color: #570653;
 }
 button:hover {
     background-color: rgb(58, 49, 49);
@@ -356,8 +364,8 @@ button:hover {
     background-color:transparent; 
 }
 #about{
-   
-        background-color: #e74334; 
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #1c7ff0,#e4e7eb);
 }
 .download-btn i{
     margin-right: 8px; /*space between icon and text*/
@@ -365,52 +373,61 @@ button:hover {
 .container{
     font-size: 25px;
 }
-/* skills bar */
-* {box-sizing: border-box}
+/*  bar */
+* {
+    box-sizing: border-box;
+}
+#skills{
+    border-radius: 30px;
+}
+.skills-container {
+    width: 100%;
+    background-color: #ddd;
+    text-align: center;
+}
 
-.container {
-  width: 100%;
-  background-color: #ddd;
-}
-.skills-row{
+.skills-row {
     display: flex;
-    margin-right: 400px;
+    justify-content: center; /* Center columns within the row */
+    margin: 0 auto;        /* Center the row itself */
 }
- .skills-column {
-    background: linear-gradient(to bottom, rgb(230, 171, 217), gray);
-    
-    margin: 50px;
-    width: 600px;
-    height: 300px;
-    border-radius: 10px;
-    
+
+.skills-column {
+    background: linear-gradient(to bottom, rgb(250, 187, 250),#646566);
+    margin: 50px;          /* Space between columns */
+    width: 600px;          /* Fixed width for columns */
+    height: 600px;         /* Fixed height for columns */
+    border-radius: 30px;
+    display: flex;         /* Enable flexbox for inner content */
+    flex-direction: column;/* Arrange children vertically */
 }
+
 .skills, .tool-sec, .technical-sec {
-  text-align: left;
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-bottom: 10px;
-  color: white;
-  
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    color: rgb(255, 255, 255);
 }
 .s-section{
     
-    background: linear-gradient(to bottom, #474e5d, #0796cf);
+    background: linear-gradient(to bottom, #0796cf,#e4e7eb);
     
 }
 .skills-header{
-    font-size: 50px;
-    color: #ffffff;
+    font-size: 65px;
+    color: rgb(238, 52, 238);
     margin-bottom: 80px;
-}
-.html {width: 70%; background-color: #04AA6D;}
-.css {width: 50%; background-color: #2196F3;}
-.js {width: 55%; background-color: #f44336;}
-.php {width: 40%; background-color: #808080;}
-* {
     box-sizing: border-box;
   }
-  
+  .softskills{
+    font-size: 60px;
+  }
+  .skills-set{
+    margin-top: 60px;
+    font-size: 20px;
+    justify-content: center;
+  }
   body {
     background-color:#389ac7;
     font-family: Helvetica, sans-serif;
@@ -419,7 +436,7 @@ button:hover {
   /* The actual timeline (the vertical ruler) */
   .timeline {
     position: relative;
-    max-width: 85%;
+    max-width: 50%;
     margin: 0 auto;
   }
   
