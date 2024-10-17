@@ -10,7 +10,19 @@
         display: block;
     }
 }
-
+@media (max-width: 300px) {
+    .skills{
+        display: block;
+    }}
+    @media (max-width: 430px) {
+        .education-timeline {
+            display: block;
+        }}
+@media (max-width: 430px) {
+    .About-Me{
+        display: block;
+    }
+}
 .row{
     border-radius: 30px;
     display: flex;
@@ -247,7 +259,7 @@ a{
 
 .sci i {
     font-size: 24px;
-    color: #fff;
+    color: #8a0404;
 }
 
 .home-info .btn-sci .sci a {
