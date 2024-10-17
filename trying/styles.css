@@ -5,7 +5,11 @@
     font-family: 'Poppins', sans-serif;
 
 }
-
+@media (max-width: 430px) {
+    nav ul {
+        display: block;
+    }
+}
 
 .row{
     border-radius: 30px;
@@ -41,6 +45,10 @@ header {
     padding: 10px 0;
     text-align: center;
     font-size: large;
+    text-align: center;
+    font-size: large;
+    
+    
 }
 
 .container {
@@ -75,11 +83,14 @@ h1 {
 nav ul {
     list-style: none;
     padding: 0;
+   
+    
 }
 
 nav ul li {
     display: inline;
     margin: 0 15px;
+ 
 }
 
 nav ul li a {
@@ -115,7 +126,7 @@ footer {
     text-align: right;
 }
 .logo span{
-    color:rgb(100, 10, 100);
+    color:rgb(241, 151, 241);
 }
 .nav-links a:hover {
     color: #ff00b3; /* Change color on hover */
@@ -186,6 +197,7 @@ a{
 .home-info .btn-sci{
     display: flex;
     align-items: center;
+    font-size: x-large;
 }
 .btn {
     display: inline-block;
@@ -194,7 +206,7 @@ a{
     border: 2px solid rgb(221, 58, 85);
     border-radius: 40px;
     box-shadow: 0 0 10px rgb(211, 44, 72);
-    font-size: 16px;
+    font-size: px;
     color: rgb(250, 247, 247);
     font-weight: 600;
     transition: 5s;
@@ -210,12 +222,40 @@ a{
     margin-left: 20px;
 
 }
+.sci {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(228, 61, 61, 0.2);
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sci a:hover {
+    background-color: rgba(49, 3, 3, 0.5);
+    transform: scale(1.1);
+}
+
+.sci i {
+    font-size: 24px;
+    color: #fff;
+}
+
 .home-info .btn-sci .sci a {
     display: inline-flex;
     padding: 8px;
     border: 1px solid rgb(211, 44, 72);
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 700px;
     color: rgb(182, 89, 162);
     margin: 0 8px;
     transition: .5s;
@@ -308,8 +348,9 @@ h2 .about{
     
 }
 .About-Me{
-    margin-top: 120px;
-    
+    margin-top: 25px;
+    font-size: large;
+    margin-bottom: 150px;
 }
 label {
     display: block;
@@ -369,9 +410,13 @@ button:hover {
 }
 .download-btn i{
     margin-right: 8px; /*space between icon and text*/
+
 }
-.container{
-    font-size: 25px;
+.container about-me{
+    font-size: 35px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
 }
 /*  bar */
 * {
