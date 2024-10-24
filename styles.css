@@ -1,41 +1,86 @@
-* {
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
 
-}
-@media (max-width: 700px) {
-    nav ul {
-        display: block;
-        align-items: flex-start;
-    }
-}
-@media (max-width: 480px) {
-    .logo h1 {
-        font-size: 1.5em;
-    }
-    }
 
-@media (max-width: 430px) {
-        .education-timeline {
-            display: block;
-        }}
-@media (max-width: 430px) {
-    .About-Me{
-        display: block;
-    }
-}
-.row{
+
+.row {
     border-radius: 30px;
     display: flex;
+    flex-wrap: wrap; 
 }
+
 p {
     max-width: 400px;
     margin-bottom: 16px;
-   
 }
 
+@media (max-width: 768px) { 
+    .about {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .home {
+        flex-direction: column; 
+        padding: 30px 5%; 
+    }
+    
+    .home-info h1 {
+        font-size: 28px; 
+    }
+    
+    .home-info h2 {
+        font-size: 20px; 
+    }
+    
+    .home-info p {
+        font-size: 24px; 
+    }
+    
+    .navbar {
+        flex-direction: column; 
+        padding: 15px 5%; 
+    }
+    
+    .navbar ul {
+        flex-direction: column; 
+    }
+    
+    .navbar ul li {
+        margin: 10px 0; 
+    }
+
+    .container {
+        flex-direction: column; 
+        padding: 60px 20px;
+        margin: 200px; 
+    }
+    
+    .image img {
+        max-width: 100%; 
+    }
+    
+    .column {
+        width: 100%; 
+        margin-bottom: 20px; 
+        max-width: fit-content;
+    }
+    
+    .skills-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .about {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
 
 @keyframes rainbow-animation {
     0% {
@@ -45,75 +90,79 @@ p {
         background-position: 100%;
     }
 }
+
 .rainbow-text {
-    font-size: 4rem;
+    margin-top: 120px;
+    font-size: 2.5rem; 
     background: linear-gradient(90deg, 
         rgb(226, 211, 223), rgb(185, 143, 176), rgb(216, 136, 173), rgb(211, 104, 206), rgb(189, 52, 148), indigo, rgb(100, 10, 100));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* For WebKit browsers */
+    -webkit-text-fill-color: transparent; 
     background-clip: text;
-    -webkit-text-fill-color:  transparent; /* For Firefox */
+    -webkit-text-fill-color: transparent; 
 }
+
 header {
-    background:transparent;
+    background: transparent;
     color: #f7f2f2;
-    padding: 10px 0;
     text-align: center;
     font-size: large;
-    text-align: center;
-    font-size: large;
-    
-    
 }
 
 .container {
     display: flex;
-    align-items: center; /* Align items vertically centered */
-    justify-content: space-between; /* Space between text and image */
-    max-width: 1500px; /* Limit the width of the container */
-    margin: auto; /* Center the container */
-    background: linear-gradient(to bottom, rgb(210, 177, 231), gray); /* Background for the container */
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 1500px; 
+    margin: auto; 
+    background: linear-gradient(to bottom, rgb(210, 177, 231), gray); 
     padding: 120px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 20px; 
 }
 
 .text {
-    flex: 1; /* Take remaining space */
-    margin-right: 20px; /* Space between text and image */
-    
+    flex: 1;
+    margin-right: 20px;
 }
 
 .image img {
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for the image */
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px; 
 }
 
 h1 {
     text-align: center;
 }
 
-
 nav ul {
     list-style: none;
     padding: 0;
-   
-    
+    position: fixed;
+    font-size: large;
+    z-index: 2;
+    background-color: #e9a1e9;
+    padding: 10px;
+    width: 100%;
+    margin: center;
+}
+
+.Business {
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
     margin: 0 15px;
- 
 }
 
 nav ul li a {
-    color: #f5f1f1;
+    color: white;
     text-decoration: none;
     font-size: large;
+    margin: center;
 }
-
 
 main {
     padding: 20px;
@@ -128,7 +177,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    background: transparent;
+    background-color: transparent;
     color: #fff;
     border-color: #570653;
 }
@@ -136,84 +185,90 @@ footer {
 .logo {
     margin: 10px 0;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     text-align: right;
 }
-.logo span{
-    color:rgb(241, 151, 241);
+
+.logo span {
+    color: #ee66c5;
 }
+
 .nav-links a:hover {
-    color: #ff00b3; /* Change color on hover */
+    color: #ff00b3; 
     font-size: 24px;
 }
 
-
-a{
+a {
     color: white;
     text-decoration: none;
 }
 
 .navbar {
     position: fixed;
-    left:0;
-    top:0;
-    width:100%;
-    padding:25px 9%;
-    display:  flex;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
-.navbar .logo{
-    font-size:30px;
+
+.navbar .logo {
+    font-size: 30px;
     font-weight: 700;
 }
-.navbar ul{
-    display:flex;
+
+.navbar ul {
+    display: flex;
 }
+
 .navbar ul li {
-    list-style:none;
-    margin-left:35px;
+    list-style: none;
+    margin-left: 35px;
 }
+
 .navbar ul li a {
     font-size: 20px;
     font-weight: 500;
     transition: .5s;
 }
+
 .navbar ul li:hover a,
 .navbar ul li.active a {
-    
     color: rgb(226, 33, 184);
 }
-.home{
+
+.home {
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: auto; 
     padding: 60px 9% 0;
     color: white;
-
 }
+
 .home-info h1 {
     font-size: 35px;
-    
 }
+
 .home-info h2 {
     font-size: 25px;
     margin-top: -10px; 
-    
-    
 }
-.home-info p{
-    font-size: 16px;
+
+.home-info p {
+    font-size: 35px;
     margin: 10px 0 25px;
- 
 }
-.home-info .btn-sci{
+
+.home-info .btn-sci {
     display: flex;
     align-items: center;
     font-size: x-large;
 }
+
 .btn {
     display: inline-block;
     padding: 10px 30px;
@@ -221,26 +276,26 @@ a{
     border: 2px solid rgb(221, 58, 85);
     border-radius: 40px;
     box-shadow: 0 0 10px rgb(211, 44, 72);
-    font-size: px;
     color: rgb(250, 247, 247);
     font-weight: 600;
-    transition: 5s;
+    transition: 0.3s; 
 }
 
 .btn:hover {
     background: transparent;
-    color:rgb(221, 47, 183);
+    color: rgb(221, 47, 183);
     box-shadow: none;
-
 }
+
 .home-info .btn-sci .sci {
     margin-left: 20px;
-
 }
+
 .sci {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    font-size: 15px;
 }
 
 .sci a {
@@ -275,19 +330,23 @@ a{
     margin: 0 8px;
     transition: .5s;
 }
+
 .home-info .btn-sci .sci a:hover {
-    background:rgb(153, 77, 136);
-    color:brown;
+    background: rgb(153, 77, 136);
+    color: brown;
     box-shadow: 0 0 9px rgb(153, 77, 136);
 }
-.home-img img{ 
+
+.home-img img { 
     margin-right: 20px;
     border-radius: 50%;
     position: relative;
 }
-.img-item{
+
+.img-item {
     align-items: center;
 }
+
 .home-img .img-box {
     position: relative;
     width: 35vw;
@@ -307,14 +366,14 @@ a{
     border-radius: 20px;
     width: 500px;
     height: 500px;
-    background: conic-gradient(transparent,
-     transparent, transparent, Pink);
+    background: conic-gradient(transparent, transparent, transparent, Pink);
 }
-.home-img .img-box .img-item{
-    position:relative;
+
+.home-img .img-box .img-item {
+    position: relative;
     width: 100%;
     height: 100%;
-    background:black;
+    background: black;
     border-radius: 50%;
     border: .1px solid black;
     display: flex;
@@ -322,6 +381,7 @@ a{
     z-index: 1;
     overflow: hidden;
 }
+
 .home-img .img-box .img-item img {
     position: absolute;
     top: 30px;
@@ -330,27 +390,34 @@ a{
     object-fit: cover;
     mix-blend-mode: lighten;
 }
-.bars-animation{
+
+.bars-animation {
     position: absolute;
     width: 100%;
     height: 100%;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #030303;
-    padding: 20px;
     color: #f2f7f7;
+    font-size: 20px;
 }
 
 .contact-container {
     background-color: transparent;
     padding: 20px;
     border-radius: 5px;
-
     max-width: 600px;
     margin: auto;
 }
-.send{
+@media (max-width: 800px) {
+    .contact-container {
+        max-width: 90%; 
+        padding: 10px; 
+    }
+}
+.send {
     background-color: #005d88;
     font-size: large;
 }
@@ -358,15 +425,18 @@ body {
 h2 {
     text-align: left;
 }
-h2 .about{
-        text-align: left;
-    
+
+h2 .about {
+    text-align: left;
+    font-size: 35px;
 }
-.About-Me{
+
+.About-Me {
     margin-top: 25px;
     font-size: large;
     margin-bottom: 150px;
 }
+
 label {
     display: block;
     margin: 10px 0 5px;
@@ -389,57 +459,64 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
 .column {
     float: left;
     width: 33.33%;
-    background-color:#f5efff;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
+    background-color: #f5efff;
+}
+
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
-#education{
-background-color:transparent;
-margin-bottom: 120px;
+#education {
+    background-color: transparent;
+    margin-bottom: 120px;
 }
-.education-header{
-    color: #570653;
+.education-header {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 40px;
+    margin-bottom: 80px;
 }
+
 button:hover {
     background-color: rgb(58, 49, 49);
 }
-#portfolio{
-    background-color: #e5d9f2;
-    }
-.contact_sec{
-    
-    background-color:transparent; 
-}
-#about{
-    border-radius: 30px;
-    background: linear-gradient(to bottom, #1c7ff0,#e4e7eb);
-}
-.download-btn i{
-    margin-right: 8px; /*space between icon and text*/
 
+#portfolio {
+    background-color: #e5d9f2;
 }
-.container about-me{
+
+.contact_sec {
+    background-color: transparent; 
+}
+
+#about {
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #1c7ff0, #e4e7eb);
+    
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
+
+.container about-me {
     font-size: 35px;
     padding-top: 10px;
     padding-left: 20px;
     padding-bottom: 10px;
+  
 }
-/*  bar */
-* {
-    box-sizing: border-box;
-}
-#skills{
+
+#skills {
     border-radius: 30px;
 }
+
 .skills-container {
     width: 100%;
     background-color: #ddd;
@@ -448,18 +525,18 @@ button:hover {
 
 .skills-row {
     display: flex;
-    justify-content: center; /* Center columns within the row */
-    margin: 0 auto;        /* Center the row itself */
+    justify-content: center; 
+    margin: 0 auto;      
 }
 
 .skills-column {
-    background: linear-gradient(to bottom, rgb(250, 187, 250),#646566);
-    margin: 50px;          /* Space between columns */
-    width: 600px;          /* Fixed width for columns */
-    height: 600px;         /* Fixed height for columns */
+    background: linear-gradient(to bottom, rgb(250, 187, 250), #646566);
+    margin: 50px;          
+    width: 500px;         
+    height: 500px;        
     border-radius: 30px;
-    display: flex;         /* Enable flexbox for inner content */
-    flex-direction: column;/* Arrange children vertically */
+    display: flex;        
+    flex-direction: column;
 }
 
 .skills, .tool-sec, .technical-sec {
@@ -469,39 +546,47 @@ button:hover {
     padding-bottom: 10px;
     color: rgb(255, 255, 255);
 }
-.s-section{
-    
-    background: linear-gradient(to bottom, #0796cf,#e4e7eb);
-    
+
+.s-section {
+    background: linear-gradient(to bottom, #0796cf, #e4e7eb);
 }
-.skills-header{
+
+.skills-header {
     font-size: 65px;
     color: rgb(238, 52, 238);
     margin-bottom: 80px;
     box-sizing: border-box;
-  }
-  .softskills{
+}
+
+.softskills {
     font-size: 60px;
-  }
-  .skills-set{
+}
+
+.skills-set {
     margin-top: 60px;
     font-size: 20px;
     justify-content: center;
-  }
-  body {
-    background-color:#389ac7;
+}
+
+body {
+    background-color: #389ac7;
     font-family: Helvetica, sans-serif;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline {
+}
+.education-header {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 40px;
+    margin-bottom: 80px;
+}
+
+.timeline {
     position: relative;
     max-width: 50%;
     margin: 0 auto;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
+    font-size: 20px;
+}
+
+.timeline::after {
     content: '';
     position: absolute;
     width: 6px;
@@ -510,42 +595,37 @@ button:hover {
     bottom: 0;
     left: 50%;
     margin-left: -3px;
-  }
-  
-  /* Container around content */
-  .container {
+}
+
+.container {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
     width: 50%;
-  }
-  
-  /* The circles on the timeline */
-  .timeline-container::after {
+}
+
+.timeline-container::after {
     content: '';
     position: absolute;
-    width: 25px;
+    width: 30px;
     height: 25px;
     right: -17px;
     background-color: rgb(248, 189, 238);
-    border: 4px solid #f13fda;
+    border: 6px solid #f13fda;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
-  }
-  
-  /* Place the container to the left */
-  .left {
+}
+
+.left {
     margin-left: 0;
-  }
-  
-  /* Place the container to the right */
-  .right {
+}
+
+.right {
     margin-right: 0;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
+}
+
+.left::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -556,10 +636,9 @@ button:hover {
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
-  }
-  
-  /* Add arrows to the right container (pointing left) */
-  .right::before {
+}
+
+.right::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -570,57 +649,44 @@ button:hover {
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
-  }
-  
-  /* Fix the circle for containers on the right side */
-  .right::after {
+}
+
+.right::after {
     left: -16px;
-  }
-  
-  /* The actual content */
-  .content {
+}
+
+.content {
     padding: 20px 30px;
     background-color: rgb(119, 14, 102);
     background-color: transparent;
     position: relative;
     border-radius: 6px;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
-    /* Place the timelime to the left */
+}
+
+@media screen and (max-width: 600px) {
     .timeline::after {
-    left: 31px;
+        left: 31px;
     }
     
-    /* Full-width containers */
     .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
     }
     
-    /* Make sure that all arrows are pointing leftwards */
     .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
     }
-  
-    /* Make sure all circles are at the same spot */
+
     .left::after, .right::after {
-    left: 15px;
+        left: 15px;
     }
     
-    /* Make all right containers behave like the left ones */
     .right {
-    left: 0%;
+        left: 0%;
     }
-  }
-  .education-header{
-    text-align: center;
-    font-size: 50px;
-    padding-top: 40px;
-    margin-bottom: 80px;
-  }
+}
+
