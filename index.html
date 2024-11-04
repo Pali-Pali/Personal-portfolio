@@ -268,13 +268,29 @@
                 "Can you tell me about your experience?": "I am currently an intern at capaciti.",
                 "Tell me about your education background": "I graduated from IIE Rosebank College in 2023 with a Bachelor of Information Technology in Business Systems. I previously graduated from the same university in 2020 with a Higher Certificate in Support Services. The National Senior Certificate, earned at Ekangala Comprehensive High School in 2018, marked the start of my academic career.",
                 "How can we reach you?": "You can reach out to me via the contact form on my website or email me directly at palesaclaudia2@gmail.com. I’d love to discuss your project!",
-                "Do you have any testimonials?": "Yes, I have received positive feedback from clients. You can find testimonials in the 'Testimonials' section of my portfolio."
+                
             },
     
             getResponse: function(userInput) {
-                const response = this.responses[userInput] || "I'm sorry, I didn't understand that. Can you ask something else?";
-                return response;
-            }
+        
+        const normalizedInput = userInput.toLowerCase();
+        if (normalizedInput.includes("skills")) {
+            return this.responses["What skills do you have?"];
+        } else if (normalizedInput.includes("experience")) {
+            return this.responses["Can you tell me about your experience?"];
+        } else if (normalizedInput.includes("Portfolio")) {
+            return this.responses["What is your portfolio about?"];
+        } else if (normalizedInput.includes("education")) {
+            return this.responses["Tell me about your education background"];  
+        } else if (normalizedInput.includes("contact")) {
+            return this.responses["How can we reach you?"]; 
+        
+        const response = this.responses[userInput] || "I'm sorry, I didn't understand that. Can you ask something else?";
+        return response;
+        
+    }
+}
+    
         };
     
         const chatBox = document.getElementById('chat-box');
