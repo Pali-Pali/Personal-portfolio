@@ -219,9 +219,106 @@
             
             
         </section>
-     
+        </div>
+    </style>
+</head>
+<body>
+
+    <div class="icons-container">
+        <ul>
+            <li><a href="#" id="chat-toggle" class="bx bxs-chat"></a></li>
+        </ul>
+    </div>
+    
+    <!-- Main chatbox -->
+    <div class="chat-container" id="chat-container">
+        <div class="header">
+            <h1>Palesa's Chatbot</h1>
+            <button id="close-chat" class="close-btn">X</button>
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Ask me about my portfolio..." />
+        <button id="send-btn">Send</button>
+    </div>
+
+    <script>
         
-        </body>
+
+        document.getElementById("chat-toggle").addEventListener("click", function() {
+            const chatContainer = document.getElementById("chat-container");
+            chatContainer.style.display = chatContainer.style.display === "flex" ? "none" : "flex";
+        });
+    
+       
+        document.getElementById("close-chat").addEventListener("click", function() {
+            document.getElementById("chat-container").style.display = "none";
+        });
+    
+        const portfolioChatbot = {
+            responses: {
+                "Hello": "Hey there",
+                "What skills do you have?": "I’m good at communication, teamwork, and problem-solving. I know HTML, CSS, JavaScript, Java, and MongoDB, and I’m comfortable using NetBeans and Visual Studio.",
+                "What is your portfolio about?": "My portfolio showcases my work as an upcoming cobol mainframe developer. In my website you will find more information about myself an aspirations in life.",
+                "Can you tell me about your experience?": "I am currently an intern at capaciti.",
+                "Tell me about your education background": "I graduated from IIE Rosebank College in 2023 with a Bachelor of Information Technology in Business Systems. I previously graduated from the same university in 2020 with a Higher Certificate in Support Services. The National Senior Certificate, earned at Ekangala Comprehensive High School in 2018, marked the start of my academic career.",
+                "How can we reach you?": "You can reach out to me via the contact form on my website or email me directly at palesaclaudia2@gmail.com. I’d love to discuss your project!",
+                "Do you have any testimonials?": "Yes, I have received positive feedback from clients. You can find testimonials in the 'Testimonials' section of my portfolio."
+            },
+    
+            getResponse: function(userInput) {
+                const response = this.responses[userInput] || "I'm sorry, I didn't understand that. Can you ask something else?";
+                return response;
+            }
+        };
+    
+        const chatBox = document.getElementById('chat-box');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+    
+        sendBtn.addEventListener('click', () => {
+            const userMessage = userInput.value;
+            if (userMessage.trim()) {
+                displayMessage(userMessage, 'user-msg');
+                const botResponse = portfolioChatbot.getResponse(userMessage);
+                displayMessage(botResponse, 'bot-msg');
+                userInput.value = '';
+            }
+            
+        });
+    
+        function displayMessage(message, className) {
+    const messageElement = document.createElement('p');
+    messageElement.className = className;
+
+ 
+    if (className === 'user-msg') {
+        const icon = document.createElement('i');
+        // icon.className = 'bx bx-user-circle';
+        icon.classList.add("bx")
+        icon.classList.add("bx-user-circle")
+        icon.style.marginRight = '5px';
+
+        messageElement.appendChild(icon); 
+    }
+    if(className === 'bot-msg') {
+        const icon = document.createElement('i');
+        // icon.className= 'bx bx-bot'
+        icon.classList.add("bx")
+        icon.classList.add("bx-bot")
+        icon.style.marginRight = '5px';
+
+        messageElement.appendChild(icon);
+    }
+
+    messageElement.appendChild(document.createTextNode(message));
+    chatBox.appendChild(messageElement);
+    chatBox.scrollTop = chatBox.scrollHeight; 
+}
+    </script>
+
+
+    
+    
     </main>
 
     <footer>
