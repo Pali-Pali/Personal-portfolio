@@ -278,7 +278,9 @@
             getResponse: function(userInput) {
         
         const normalizedInput = userInput.toLowerCase();
-        if (normalizedInput.includes("skills")) {
+        if (normalizedInput.includes("Hey")) {
+            return this.responses["Hello"];
+        }else if (normalizedInput.includes("skills")) {
             return this.responses["What skills do you have?"];
         } else if (normalizedInput.includes("experience")) {
             return this.responses["Can you tell me about your experience?"];
