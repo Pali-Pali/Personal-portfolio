@@ -38,6 +38,9 @@ Navigate to the project directory:cd Personal-portfolio
 
 Open index.html in your web browser.
 
+**Deployment link**
+https://personal-portfolio-gold-two.vercel.app/
+
 **Features**
 
 Sections for About Me, Projects, Education, and Contact
