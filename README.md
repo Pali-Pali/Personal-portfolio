@@ -7,8 +7,6 @@ This project showcases a responsive, modern, and visually appealing personal por
 [[https://personal-portfolio-gold-two.vercel.app/](https://personal-portfolio-oemjs6ngk-palesas-projects-66f317bc.vercel.app/#about)](https://personal-portfolio-oemjs6ngk-palesas-projects-66f317bc.vercel.app/
 )
 
-https://personal-portfolio-oemjs6ngk-palesas-projects-66f317bc.vercel.app/#about
-
 📚 Table of Contents
 Features
 
