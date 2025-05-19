@@ -89,6 +89,7 @@ const portfolioChatbot = {
     }
 };
 
+
 // Chat UI Controls
 document.addEventListener('DOMContentLoaded', function() {
     const chatToggle = document.getElementById("chat-toggle");
